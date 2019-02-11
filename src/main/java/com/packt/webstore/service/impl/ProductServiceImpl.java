@@ -1,4 +1,4 @@
-package com.packt.webstore.service.impl;
+ package com.packt.webstore.service.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -30,6 +30,10 @@ public class ProductServiceImpl implements ProductService{
 	
 	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams){
 		return productRepository.getProductsByFilter(filterParams);
+	}
+
+	public List<Product> getProductsByManufacturer(String manufacturer) {
+		return productRepository.getProductsByManufacturer(manufacturer);
 	}
 
 	
